@@ -56,6 +56,7 @@ class DiceRoller(QWidget):
         
         self.setLayout(self.layout)
         self.setWindowTitle('Dice Roller')
+        self.resize(400, 300)  # initial size of the window
         self.show()
 
     def draw_dice(self):
