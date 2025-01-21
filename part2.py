@@ -18,6 +18,9 @@ class Dice:
     def __init__(self, sides):
         self.sides = sides
         self.value = random.randint(1, sides)
+
+    def getVal(self):
+        return self.value
     
     def __str__(self):
         return str(self.value)
@@ -92,7 +95,7 @@ class DiceRoller(QWidget):
             product_dice *= dice.value
         self.label_sum.setText(f'Sum: {sum_dice}')
         self.label_product.setText(f'Product: {product_dice}')
-        self.label_dice.setText(f'Dices: {", ".join(str(dice) for dice in dices)}')
+        self.label_dice.setText(f'Dices: {", ".join(str(dice.getVal()) for dice in dices)}')
 
 
 
